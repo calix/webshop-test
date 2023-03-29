@@ -1,7 +1,5 @@
 import React, { FC, ReactElement, useContext, useEffect, useMemo } from 'react';
 import Header from './header';
-import { Routes, Route, useNavigate } from 'react-router-dom';
-import HomePage from '../pages/homePage';
 import { Stack } from '@fluentui/react';
 import { AppContext } from '../models/applicationState';
 import { WebShopContext } from '../components/webShopContext';
@@ -10,7 +8,7 @@ import { ProductActions } from '../actions/productActions';
 import {
     headerStackStyles,
     itemStyles,
-    mainStackStyles, numericalSpacingStackTokens, productItemStyle,
+    numericalSpacingStackTokens, productItemStyle,
     rootStackStyles,
     sidebarStackStyles,
     stackStyles
@@ -18,7 +16,6 @@ import {
 import { bindActionCreators } from '../actions/actionCreators';
 
 const Layout: FC = (): ReactElement => {
-    const navigate = useNavigate();
     const appContext = useContext<AppContext>(WebShopContext)
     const actions = useMemo(() => ({
         lists: bindActionCreators(listActions, appContext.dispatch) as unknown as ProductActions,
@@ -29,7 +26,6 @@ const Layout: FC = (): ReactElement => {
         if (!appContext.state.application?.products) {
             actions.lists.list();
         }
-        console.log(appContext.state);
     }, [actions.lists, appContext.state.application?.products]);
 
     const productGrid = () => {

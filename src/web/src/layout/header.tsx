@@ -1,4 +1,4 @@
-import { FontIcon, getTheme, IconButton, IIconProps, IStackStyles, mergeStyles, Persona, PersonaSize, Stack, Text } from '@fluentui/react';
+import { FontIcon, getTheme, IStackStyles, mergeStyles, Stack, Text } from '@fluentui/react';
 import React, { FC, ReactElement } from 'react';
 
 const theme = getTheme();
@@ -22,15 +22,6 @@ const toolStackClass: IStackStyles = {
         alignItems: 'center',
         height: 48,
         paddingRight: 10
-    }
-}
-
-const iconProps: IIconProps = {
-    styles: {
-        root: {
-            fontSize: 16,
-            color: theme.palette.white
-        }
     }
 }
 

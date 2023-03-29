@@ -1,6 +1,5 @@
 import { Dispatch } from "react";
 import { ProductsActions } from "../actions/common";
-import { ProductItem } from "./productItem";
 import { Products } from "./products";
 
 export interface AppContext {
