@@ -22,6 +22,8 @@ SUCCESS: Your Azure app has been deployed!
 Right now the only thing the application does it keep som persisted data in CosmosDb, and this data is rendered in the
 React web app service.
 
+The Github action 
+
 ![img.png](img.png)
 
 There are two endpoints:
