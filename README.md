@@ -31,3 +31,7 @@ https://app-api-<ident>.azurewebsites.net/products
 
 Create a new product and save it to the database
 https://app-api-<ident>.azurewebsites.net/products/<product id>
+
+## Schema
+
+![img_1.png](img_1.png)
